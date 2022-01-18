@@ -4,16 +4,22 @@
   font-family: "Luxurious Roman";
 }
 /* HEADER */
+header{
+  display: flex;
+  width: 100%;
+}
 #header {
   height: 30vh;
   width: 100%;
   background-image: url(../img/header6.jpeg);
   background-position-y: 20%;
   position: relative;
+  background-size: cover;
+  
 }
 
 #logo {
-  height: 20%;
+  height: 40%;
   width: 20%;
 }
 
@@ -103,14 +109,14 @@ img {
   height: 100%;
   width: 100%;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 300px) {
   #navBar {
     height: 200px;
   }
   #lista {
     flex-direction: column;
   }
-  
+
   #headerImgLogo {
     content: icon;
     height: 100px;
@@ -141,12 +147,15 @@ img {
   }
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 300px){
+  #header{
+    background-size: cover;
+  }
   
   #headerImgLogo {
     content: icon;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
   }
   #galeria {
     display: grid;
