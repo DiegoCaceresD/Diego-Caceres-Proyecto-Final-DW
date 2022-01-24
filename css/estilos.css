@@ -78,45 +78,18 @@ main {
 }
 
 
-#imagenUno {
-  grid-area: a1;
-}
-#imagenDos {
-  grid-area: a2;
-}
-#imagenTres {
-  grid-area: a3;
-}
-#imagenCuatro {
-  grid-area: a4;
-}
-#imagenCinco {
-  grid-area: a5;
-}
-#imagenSeis {
-  grid-area: a6;
-}
-#imagenSiete {
-  grid-area: a7;
-}
-#imagenOcho {
-  grid-area: a8;
-}
-#imagenNueve {
-  grid-area: a9;
-}
-img {
-  height: 100%;
-  width: 100%;
-}
+
 @media only screen and (max-width: 300px) {
+  main {
+    height: 100%;
+  }
   #navBar {
     height: 200px;
   }
   #lista {
     flex-direction: column;
   }
-
+  
   #headerImgLogo {
     content: icon;
     height: 100px;
@@ -129,17 +102,11 @@ img {
   }
   #galeria{
     display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 30% 30%;
-    grid-template-rows: 30% 30%;
-    justify-content: space-around;
-    align-content: space-around;
-    grid-template-areas: "a1 a2"
-    "a3 a4"
-    "a5 a6"
-    "a7 a8";
-                         
+    width: 90%;
+    margin:5%;
+    grid-gap: 30px;
+    grid-template-rows: repeat(8, 1fr);
+    
   }
   img{
     width: 100%;
@@ -169,12 +136,49 @@ img {
       "a1 a2 a3"
       "a4 a5 a6"
       "a7 a8 a9";
-
-}
-}
-/* FOOTER */
-footer {
-  display: flex;
+      
+    }
+    .animationGalery{
+      transition: all 300ms;
+    }
+    .animationGalery:hover{
+      transform: scale(1.10);
+    }
+    #imagenUno {
+      grid-area: a1;
+    }
+    #imagenDos {
+      grid-area: a2;
+    }
+    #imagenTres {
+      grid-area: a3;
+    }
+    #imagenCuatro {
+      grid-area: a4;
+    }
+    #imagenCinco {
+      grid-area: a5;
+    }
+    #imagenSeis {
+      grid-area: a6;
+    }
+    #imagenSiete {
+      grid-area: a7;
+    }
+    #imagenOcho {
+      grid-area: a8;
+    }
+    #imagenNueve {
+      grid-area: a9;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  /* FOOTER */
+  footer {
+    display: flex;
   background-color: #d98e04;
   height: 15vh;
 }
