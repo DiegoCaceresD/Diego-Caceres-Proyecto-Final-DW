@@ -57,6 +57,8 @@ header{
   background-color: #f2d3778e;
 }
 
+
+
 /* MAIN */
 
 main {
@@ -75,6 +77,10 @@ main {
 .chat img {
   width: 100%;
   height: auto;
+}
+.contacto{
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -174,6 +180,9 @@ main {
     img {
       height: 100%;
       width: 100%;
+    }
+    .contacto{
+      margin-top: 100px;
     }
   }
   /* FOOTER */

@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" href="../img/logo.png" />
     <title>KALON'S</title>
   </head>
-  <body>
+  <body class="bg-secondary">
     <header id="header">
       <div id="logo">
         <a href="../index.html">
@@ -41,34 +41,37 @@
       </ul>
     </nav>
     <main>
-      <section>
-        <form action="">
-          <fieldset>
-            <legend>Consúltenos</legend>
-            <label for="nombre">Nombre</label> 
-            <input type="text" id="nombre" />
-            <br />
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" />
-            <br />
-            <label for="email">e-mail</label>
-            <input type="email" id="email" />
-            <br />
-            <label for="telefono">Nro telefónico</label>
-            <input type="text" id="telefono" />
-            <br />
-            <label for="caja de comentarios"> Consulta</label>
-            <textarea
-              name=""
-              id="caja de comentarios"
-              cols="30"
-              rows="10"
-            ></textarea>
-            <input type="submit" />
-            <input type="reset" value="borrar" />
-          </fieldset>
-        </form>
-      </section>
+      <section class="d-flex justify-content-center contacto">
+        <div class="card col-sm-3 p-3">
+          <div class="mb-3">
+            <h4>Contacto</h4>
+          </div>
+          <div class="mb-2">
+            <form action="">
+              <div class="mb-2">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="ej:Pedro">
+              </div>
+              <div class="mb-2">
+                <label for="apellido">Apellido</label>
+                <input type="text" class="form-control" name="apellido" id="apellido" placeholder="ej:Gutierrez">
+              </div>
+              <div class="mb-2">
+                <label for="correo">Correo</label>
+                <input type="text" class="form-control" name="correo" id="correo" placeholder="ej:PedroGutierrez@mail.com">
+              </div>
+              <div class="mb-2">
+                <label for="consulta">Consulta</label>
+                <textarea name="consulta" class="form-control" id="consulta" ></textarea>
+              </div>
+              <div class="mb-2">
+                <button class="btn btn-primary">Enviar</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        </section>
       <div class="chat">
         <a
           href="https://api.whatsapp.com/send/?phone=56937616361&text&app_absent=0"
