@@ -4,6 +4,10 @@
   padding: 0;
   font-family: "Luxurious Roman"; }
 
+.tamanioFull, .anchor, #firma {
+  height: 100%;
+  width: 100%; }
+
 /* HEADER */
 header {
   display: flex;
@@ -33,28 +37,17 @@ header {
   #navBar ul {
     height: 100%; }
 
-#lista {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-around; }
-
 .decoration {
   text-decoration: none; }
 
 .anchor {
-  display: flex;
-  height: 100%;
-  width: 100%;
   color: #ffff;
   text-decoration: none;
   align-items: center;
   justify-content: center; }
-
-.anchor:hover {
-  background-color: #f2d3778e;
-  color: white; }
+  .anchor:hover {
+    background-color: #f2d3778e;
+    color: white; }
 
 /* MAIN */
 main {
@@ -86,9 +79,9 @@ main {
 
 .servicios {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: center; }
+  flex-direction: column; }
 
 @media only screen and (max-width: 800px) {
   main {
@@ -160,14 +153,6 @@ main {
   position: relative;
   align-content: center;
   padding: 100px; }
-
-.ubicacion {
-  position: relative; }
-
-.mapa {
-  position: relative;
-  top: 20%;
-  left: 20%; }
 
 :root {
   --d: 700ms;
@@ -348,8 +333,6 @@ footer {
 
 #firma {
   display: flex;
-  width: 100%;
-  height: 100%;
-  color: #050505;
   justify-content: center;
-  align-items: flex-end; }
+  align-items: flex-end;
+  color: #050505; }

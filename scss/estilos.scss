@@ -3,6 +3,17 @@
     padding: 0;
     font-family: "Luxurious Roman";
   }
+
+  .tamanioFull{
+    height: 100%;
+    width: 100%;
+  }
+  @mixin DisplayAlineacion ($display, $justify-content, $align-items) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items; 
+    
+  }
   
   /* HEADER */
   header{
@@ -37,29 +48,21 @@
       height: 100%;
     }
   }
-  #lista {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-  }
   .decoration{
       text-decoration: none;
   }
   
   .anchor {
-    display: flex;
-    height: 100%;
-    width: 100%;
+   @extend .tamanioFull;
     color: #ffff;
     text-decoration: none;
     align-items: center;
     justify-content: center;
-  }
-  .anchor:hover {
+  
+    &:hover {
     background-color: #f2d3778e;
     color: white;
+   }
   }
 
   
@@ -99,18 +102,10 @@
   }
   
   .servicios{
-    display: flex;
+    @include DisplayAlineacion(flex,center,center);
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
-  // .mapa{
-  //   position:relative;
-  //   display: flex;
-  //   height: 300px;
-  //   width: 300px;
-  // }
   
   
 
@@ -219,16 +214,7 @@
       align-content: center;
       padding: 100px; 
     }
-    .ubicacion{
-     position: relative;
-    }
-
-
-  .mapa{
-   position: relative;
-   top: 20%;
-   left:20%;
-  }
+  
     @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 :root {
   --d: 700ms;
@@ -438,10 +424,7 @@ html, body {
   }
   
   #firma{
-    display: flex;
-    width: 100%;
-    height: 100%;
+    @extend .tamanioFull;
+    @include DisplayAlineacion (flex,center,flex-end);
     color: rgb(5, 5, 5);
-    justify-content: center;
-    align-items: flex-end;
   }
